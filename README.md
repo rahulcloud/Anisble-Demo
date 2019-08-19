@@ -1,6 +1,6 @@
 # Anisble-Demo
 
-########################ANSIBLE INSTALLATION DOC and WORLFLOW########################\n
+########################ANSIBLE INSTALLATION DOC and WORLFLOW########################
 For Ansible to work,python and SSH should be configured on all the servers
 
 Prerequistie
