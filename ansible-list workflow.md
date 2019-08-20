@@ -121,6 +121,31 @@ anisble-playbook yum-update.yml
 #####################################  
 to skip retry files creation in ansible.cfg setup below parameter  
 retry_files_enabled = False  
+
+###################################### 
+ansible-playbook install-services.yml  
+######################################  
+create a simple index.php  
+ <?php  
+ echo "<h1>Hello, World! This is my Ansible page.</h1>";  
+?>  
+
+ansible-playbook setup-app.yml  (without Configure php.ini file)  
+######################################
+Now go for some configuration chnages with playbook  
+ansible-playbook setp-app.yml  
+          #########     
+Configuring Own Load balancer for HTTPD server  
+Create Folder Config place inside lb-config.j2  
+Ansible-playbook setub-lb.yml  
+
+once setup loadbalancer completes for lb server and check the status  
+IP/balancer-manager  
+#######################################
+Now let see how service Handlers work in Ansible  
+
+ansible-playbook setup-app.yml  
+ansible-playbook setup-lb.yml
   
 ######################################  
 setup loadbalancer for lb server and check the status  
