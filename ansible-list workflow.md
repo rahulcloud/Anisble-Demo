@@ -69,7 +69,7 @@ web1 ansible_host=x.x.x.x
 web2 ansible_host=x.x.x.x  
   
 [loadbalancers]  
-app1 ansible_host=x.x.x.x  
+lb1 ansible_host=x.x.x.x  
   
 [local]  
 control ansible_connection=local  
@@ -100,7 +100,7 @@ ansible -m ping all
  ssh_args = -o ControlMaster=no   
    
  #############################################  
- try some other simple commands  
+ Try some other simple commands  
  #############################################  
  ansible -m shell -a "uname" webservers:loadbalancers  
   ansible -m command -a "/bin/false" \!control  
@@ -119,7 +119,7 @@ anisble-playbook ping.yml
 anisble-playbook uname.yml  
 anisble-playbook yum-update.yml  
 #####################################  
-to skip retry files creation in ansible.cfg setup below parameter  
+To skip retry files creation in ansible.cfg setup below parameter  
 retry_files_enabled = False  
 
 ###################################### 
@@ -134,7 +134,7 @@ ansible-playbook setup-app.yml  (without Configure php.ini file)
 ######################################
 Now go for some configuration chnages with playbook  
 ansible-playbook setp-app.yml  
-          #########     
+          ##################      
 Configuring Own Load balancer for HTTPD server  
 Create Folder Config place inside lb-config.j2  
 Ansible-playbook setub-lb.yml  
