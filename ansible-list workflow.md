@@ -21,14 +21,9 @@ Ansible can be installed as part of the bootstrapping of the instance or with Ru
   
   sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm  
   sudo yum -y install ansible  
-####################################  
-  
-ansible --list-hosts all  
-  
-ansible -i inventoryfile --list-hosts all  
-  
+   
 ############################################  
-inventoryfile: example  
+# inventoryfile: example  
   
 #host-dev  
   
@@ -41,13 +36,17 @@ x.x.x.x
   
 [local]  
 control ansible_connection=local  
-###########################################  
+###########################################
+# Once Inventory setup complated just check below commands  
+ansible --list-hosts all  
+  
+ansible -i inventoryfile --list-hosts all    
   
 default ansible.cfg file  
 https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg  
 ###########################################  
   
-anisble.cfg file creation  
+# anisble.cfg file creation  
   
 #ansible.cfg  
   
@@ -60,7 +59,7 @@ ansible --list-hosts webservers
 ansible --list-hosts loadbalancers  
   
 ##########################################  
-inventoryfile: example  
+# inventoryfile: example with tags included  
   
 #host-dev  
   
@@ -106,12 +105,12 @@ ansible -m ping all
   --> to check RC-return code  
    
 ###############################################  
-  Modules list  
+#  Modules list  
   https://docs.ansible.com/ansible/latest/modules/modules_by_category.html  
   the ansible command  
   https://docs.ansible.com/ansible/latest/cli/ansible.html  
 ###############################################  
-Intro to playbooks  
+# Intro to playbooks  
 https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html  
 ###############################################  
 anisble-playbook ping.yml  
