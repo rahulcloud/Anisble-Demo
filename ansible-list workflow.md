@@ -110,7 +110,7 @@ ansible -m ping all
   the ansible command  
   https://docs.ansible.com/ansible/latest/cli/ansible.html  
 ###############################################  
-# Intro to playbooks  
+# Introduction to playbooks  
 https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html  
 ###############################################  
 anisble-playbook ping.yml  
@@ -120,10 +120,10 @@ anisble-playbook yum-update.yml
 To skip retry files creation in ansible.cfg setup below parameter  
 retry_files_enabled = False  
 
-###################################### 
+######################################  
 ansible-playbook install-services.yml  
 ######################################  
-create a simple index.php  
+# create a simple index.php  
  <?php  
  echo "<h1>Hello, World! This is my Ansible page.</h1>";  
 ?>  
@@ -140,7 +140,7 @@ Ansible-playbook setub-lb.yml
 once setup loadbalancer completes for lb server and check the status  
 IP/balancer-manager  
 #######################################
-Now let see how service Handlers work in Ansible  
+# Now let see how service Handlers work in Ansible  
 
 ansible-playbook setup-app.yml  
 ansible-playbook setup-lb.yml
