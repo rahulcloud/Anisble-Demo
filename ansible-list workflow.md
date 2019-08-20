@@ -7,16 +7,16 @@ SSH
 Installing Ansible on target instances   
 Ansible can be installed as part of the bootstrapping of the instance or with Run Command. The following is some reference information   you can use to install Ansible on different Linux distributions:  
 
-amazon linux:-->  
+# amazon linux:-->  
   
   For Amazon Linux Ansible can be installed using pip. You can use the following command.  
   
   sudo pip install ansible  
-Ubuntu:-->  
+# Ubuntu:-->  
   For Ubuntu you can install Ansible using the default package manager. Use this command.  
   
   sudo apt-get install ansible -y  
-RedHat 7:-->  
+# RedHat 7:-->  
   For RedHat 7 you can install Ansible by enabling the epel repo. Use the following commands:  
   
   sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm  
@@ -100,8 +100,7 @@ ansible -m ping all
  ssh_args = -o ControlMaster=no   
    
  #############################################  
- Try some other simple commands  
- #############################################  
+ # Try some other simple commands   
  ansible -m shell -a "uname" webservers:loadbalancers  
   ansible -m command -a "/bin/false" \!control  
   --> to check RC-return code  
