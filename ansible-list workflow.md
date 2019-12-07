@@ -134,14 +134,14 @@ retry_files_enabled = False
 ######################################  
 ansible-playbook install-services.yml  
 ######################################  
-# create a simple index.php  
-# '<?php    
-# echo "<h1>Hello, World! This is my Ansible page.</h1>";  
-# ?>  
-
-
+ create a simple index.php  
+ '<?php    
+ echo "<h1>Hello, World! This is my Ansible page.</h1>";  
+ ?>  
+  
+#######################################  
 ansible-playbook setup-app.yml  (without Configure php.ini file)  
-######################################
+######################################  
 Now go for some configuration chnages with playbook  
 ansible-playbook setp-app.yml  
           ##################      
