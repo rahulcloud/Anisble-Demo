@@ -45,6 +45,17 @@ ansible -i inventoryfile --list-hosts all
 default ansible.cfg file  
 https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg  
 ###########################################  
+sample ansible.cfg  
+# ansible.cfg  
+  
+[defaults]  
+inventory = ./ec2.py  
+remote_user = ec2-user  
+private_key_file = /root/.ssh/key.pem  
+host_key_checking = False  
+retry_files_enabled = False  
+  
+#######################################
   
 # anisble.cfg file creation  
   
