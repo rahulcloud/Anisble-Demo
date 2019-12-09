@@ -1,0 +1,21 @@
+# this playbook to install apache webserver
+
+---
+- name: This sets up an httpd webserver
+  hosts: node
+  become: true
+  tasks:
+  - name: Install apache packages 
+    yum:
+      name: httpd
+      state: present
+  - name: ensure httpd is running
+    service:
+      name: httpd 
+      state: started
+
+  - name: example copying file with owner and permissions
+    copy:
+      src: /root/files/index.html
+      dest: /var/www/html/
+      mode: 0644

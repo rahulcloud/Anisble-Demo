@@ -1,0 +1,9 @@
+# yum-update.yml
+
+---
+  - hosts: all
+    become: true
+    gather_facts: no
+    tasks:
+      - name: Update yum packages
+        yum: name=* state=latest
